@@ -1,5 +1,4 @@
 CREATE DATABASE BetPrime;
-USE BetPrime;
 
 ##### Criação Tabelas ######
 
@@ -206,3 +205,15 @@ CONSTRAINT FK_Bilhete_ApostaJogoColetivoBilhete FOREIGN KEY (id_bilhete)
 CONSTRAINT FK_ApostaJogoColetivo_ApostaJogoColetivoBilhete FOREIGN KEY (id_bilhete)
 	REFERENCES Aposta_Jogo_Coletivo (id_aposta_jogo_colettivo)
 ); 
+
+CREATE TABLE JogadorEquipaTipoAosta_Boletim(
+id_boletim INT NOT NULL,
+id_equipa INT NOT NULL,
+id_jogador INT NOT NULL,
+
+CONSTRAINT FK_JogadorEquipaTipoAostaBoletim_Boletim FOREIGN KEY (id_boletim)
+	REFERENCES Boletim(id_boletim),
+    
+CONSTRAINT FK_JogadorEquipaTipoAostaBoletim_JogadorEquipa FOREIGN KEY (id_equipa, id_jogador)
+	REFERENCES Jogador_Equipa(id_equipa, id_jogador)
+);
