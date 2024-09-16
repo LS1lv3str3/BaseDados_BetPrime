@@ -41,12 +41,9 @@ VALUES
 (9, 'doc_carlos_lopes.jpg', '2024-09-09', 'Recusado'),
 (10, 'doc_marta_nunes.jpg', '2024-09-10', 'Em análise');
 
-
 INSERT INTO Tipo_Aposta_Boletim (nome_tipo_aposta_boletim)
 VALUES 
-('Simples'),
-('Múltipla'),
-('Combinada');
+('Simples'), ('Múltipla'), ('Combinada');
 
 
 INSERT INTO Modalidade_Individual (nome_modalidade_individual)
@@ -56,177 +53,6 @@ VALUES
 ('Ténis'),
 ('Padel'),
 ('Ciclismo');
-
-#### Modaalidade Padel ####
-INSERT INTO Jogador (nome, apelido, nacionalidade)
-VALUES 
-('Alejandro', 'Galán', 'Espanha'),
-('Juan', 'Lebrón', 'Espanha'),
-('Paquito', 'Navarro', 'Espanha'),
-('Fernando', 'Belasteguín', 'Argentina'),
-('Agustín', 'Tapia', 'Argentina'),
-('Maxi', 'Sánchez', 'Argentina'),
-('Sanyo', 'Gutiérrez', 'Argentina'),
-('Javi', 'Rico', 'Espanha'),
-('Franco', 'Stupaczuk', 'Argentina'),
-('Martin', 'Di Nenno', 'Argentina');
-
-
-##### Criar jogos Padel #####
-INSERT INTO Jogo_Individual (id_modalidade_individual, nome_competicao, data)
-VALUES 
-(4, 'World Padel Tour - Madrid Open', '2024-03-15 10:00:00'),
-(4, 'World Padel Tour - Barcelona Master', '2024-04-12 14:00:00'),
-(4, 'World Padel Tour - Marbella Challenger', '2024-05-07 09:00:00'),
-(4, 'World Padel Tour - Valencia Open', '2024-06-10 13:00:00'),
-(4, 'World Padel Tour - Malaga Open', '2024-07-05 11:00:00'),
-(4, 'World Padel Tour - Las Rozas Master', '2024-08-03 16:00:00'),
-(4, 'World Padel Tour - Alicante Open', '2024-09-14 17:00:00'),
-(4, 'World Padel Tour - Bilbao Open', '2024-10-20 18:00:00'),
-(4, 'World Padel Tour - Menorca Master', '2024-11-02 12:00:00'),
-(4, 'World Padel Tour - Madrid Finals', '2024-12-09 19:00:00');
-
-
--- Associação de Jogadores aos Jogos de Padel
--- World Padel Tour - Madrid Open
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(1, 1), (2, 1), (3, 1), (4, 1);
-
--- World Padel Tour - Barcelona Master
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(5, 2), (6, 2), (7, 2), (8, 2);
-
--- World Padel Tour - Marbella Challenger
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(9, 3), (10, 3), (1, 3), (2, 3);
-
--- World Padel Tour - Valencia Open
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(3, 4), (4, 4), (5, 4), (6, 4);
-
--- World Padel Tour - Malaga Open
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(7, 5), (8, 5), (9, 5), (10, 5);
-
--- World Padel Tour - Las Rozas Master
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(1, 6), (2, 6), (3, 6), (4, 6);
-
--- World Padel Tour - Alicante Open
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(5, 7), (6, 7), (7, 7), (8, 7);
-
--- World Padel Tour - Bilbao Open
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(9, 8), (10, 8), (1, 8), (2, 8);
-
--- World Padel Tour - Menorca Master
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(3, 9), (4, 9), (5, 9), (6, 9);
-
--- World Padel Tour - Madrid Finals
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(7, 10), (8, 10), (9, 10), (10, 10);
-
-#### Modaalidade Ténis ####
-INSERT INTO Jogador (nome, apelido, nacionalidade)
-VALUES 
-('Novak', 'Djokovic', 'Sérvia'),
-('Carlos', 'Alcaraz', 'Espanha'),
-('Daniil', 'Medvedev', 'Rússia'),
-('Stefanos', 'Tsitsipas', 'Grécia'),
-('Casper', 'Ruud', 'Noruega'),
-('Jannik', 'Sinner', 'Itália'),
-('Andrey', 'Rublev', 'Rússia'),
-('Alexander', 'Zverev', 'Alemanha'),
-('Holger', 'Rune', 'Dinamarca'),
-('Matteo', 'Berrettini', 'Itália');
-
-
-##### Criar jogos Ténis #####
-INSERT INTO Jogo_Individual (id_modalidade_individual, nome_competicao, data)
-VALUES 
-(3, 'Australian Open - Final', '2024-01-28 15:00:00'),
-(3, 'Roland Garros - Semi-Final', '2024-06-07 12:00:00'),
-(3, 'Wimbledon - Final', '2024-07-14 14:00:00'),
-(3, 'US Open - Quarter-Final', '2024-09-02 18:00:00'),
-(3, 'ATP Finals - Round Robin', '2024-11-10 20:00:00'),
-(3, 'Monte Carlo Masters - Final', '2024-04-14 16:00:00'),
-(3, 'Madrid Open - Final', '2024-05-12 17:00:00'),
-(3, 'Italian Open - Quarter-Final', '2024-05-17 13:00:00'),
-(3, 'Paris Masters - Semi-Final', '2024-11-02 15:00:00'),
-(3, 'Cincinnati Masters - Final', '2024-08-18 16:00:00');
-
-
--- Australian Open - Final (ID Jogo: 11)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(11, 11),  -- Novak Djokovic
-(12, 11);  -- Carlos Alcaraz
-
--- Roland Garros - Semi-Final (ID Jogo: 12)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(13, 12),  -- Daniil Medvedev
-(14, 12);  -- Stefanos Tsitsipas
-
--- Wimbledon - Final (ID Jogo: 13)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(15, 13),  -- Casper Ruud
-(16, 13);  -- Jannik Sinner
-
--- US Open - Quarter-Final (ID Jogo: 14)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(17, 14),  -- Andrey Rublev
-(18, 14);  -- Alexander Zverev
-
--- ATP Finals - Round Robin (ID Jogo: 15)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(19, 15),  -- Holger Rune
-(20, 15);  -- Matteo Berrettini
-
--- Monte Carlo Masters - Final (ID Jogo: 16)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(11, 16),  -- Novak Djokovic
-(13, 16);  -- Daniil Medvedev
-
--- Madrid Open - Final (ID Jogo: 17)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(12, 17),  -- Carlos Alcaraz
-(14, 17);  -- Stefanos Tsitsipas
-
--- Italian Open - Quarter-Final (ID Jogo: 18)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(15, 18),  -- Casper Ruud
-(16, 18);  -- Jannik Sinner
-
--- Paris Masters - Semi-Final (ID Jogo: 19)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(17, 19),  -- Andrey Rublev
-(18, 19);  -- Alexander Zverev
-
--- Cincinnati Masters - Final (ID Jogo: 20)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(19, 20),  -- Holger Rune
-(20, 20);  -- Matteo Berrettini
 
 
 #### Modaalidade Snooker ####
@@ -245,7 +71,7 @@ VALUES
 
 
 ##### Criar jogos Snooker #####
-INSERT INTO Jogo_Individual (id_modalidade_individual, nome_competicao, data)
+INSERT INTO Jogo_Individual (id_modalidade_individual, nome_jogo, data)
 VALUES 
 (1, 'World Snooker Championship - Final', '2024-05-05 14:00:00'),
 (1, 'UK Championship - Semi-Final', '2024-11-24 16:00:00'),
@@ -258,167 +84,47 @@ VALUES
 (1, 'Northern Ireland Open - Final', '2024-11-05 15:00:00'),
 (1, 'Tour Championship - Final', '2024-03-24 18:00:00');
 
-
 -- Jogos do World Snooker Championship - Final
 INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
 VALUES
-(21, 21),  -- Ronnie O'Sullivan
-(22, 21);  -- Judd Trump
+(1, 1),  -- Ronnie O'Sullivan
+(2, 1),  -- Judd Trump
 
 -- Jogos do UK Championship - Semi-Final
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(23, 22),  -- Mark Selby
-(24, 22);  -- Neil Robertson
+(3, 2),  -- Mark Selby
+(4, 2), -- Neil Robertson
 
 -- Jogos do The Masters - Final
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(25, 23),  -- John Higgins
-(26, 23);  -- Ding Junhui
+(5, 3),  -- John Higgins
+(6, 3),  -- Ding Junhui
 
 -- Jogos do China Open - Final
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(27, 24),  -- Mark Allen
-(28, 24);  -- Shaun Murphy
+(7, 4),  -- Mark Allen
+(8, 4),  -- Shaun Murphy
 
 -- Jogos do Scottish Open - Final
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(29, 25),  -- Kyren Wilson
-(30, 25);  -- Barry Hawkins
+(9, 5),  -- Kyren Wilson
+(10, 5),  -- Barry Hawkins
 
 -- Jogos do Welsh Open - Quarter-Final
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(21, 26),  -- Ronnie O'Sullivan
-(23, 26);  -- Mark Selby
+(1, 6),  -- Ronnie O'Sullivan
+(3, 6),  -- Mark Selby
 
 -- Jogos do European Masters - Semi-Final
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(22, 27),  -- Judd Trump
-(24, 27);  -- Neil Robertson
+(2, 7),  -- Judd Trump
+(4, 7),  -- Neil Robertson
 
 -- Jogos do English Open - Final
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(25, 28),  -- John Higgins
-(26, 28);  -- Ding Junhui
+(5, 8),  -- John Higgins
+(6, 8),  -- Ding Junhui
 
 -- Jogos do Northern Ireland Open - Final
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(27, 29),  -- Mark Allen
-(28, 29);  -- Shaun Murphy
+(7, 9),  -- Mark Allen
+(8, 9),  -- Shaun Murphy
 
 -- Jogos do Tour Championship - Final
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(29, 30),  -- Kyren Wilson
-(30, 30);  -- Barry Hawkins
-
-
-
-#### Modaalidade Ciclismo ####
-INSERT INTO Jogador (nome, apelido, nacionalidade)
-VALUES 
-('Tadej', 'Pogačar', 'Eslovénia'),
-('Jonas', 'Vingegaard', 'Dinamarca'),
-('Primož', 'Roglič', 'Eslovénia'),
-('Egan', 'Bernal', 'Colômbia'),
-('Geraint', 'Thomas', 'Reino Unido'),
-('David', 'Gaudu', 'França'),
-('Simon', 'Yates', 'Reino Unido'),
-('Adam', 'Yates', 'Reino Unido'),
-('Richard', 'Carapaz', 'Equador'),
-('Enric', 'Mas', 'Espanha'),
-('Wout', 'Van Aert', 'Bélgica'),
-('Tom', 'Pidcock', 'Reino Unido'),
-('Jai', 'Hindley', 'Austrália'),
-('Mikel', 'Landa', 'Espanha'),
-('Ben', 'O\'Connor', 'Austrália'),
-('Julian', 'Alaphilippe', 'França'),
-('Matej', 'Mohorič', 'Eslovénia'),
-('Nairo', 'Quintana', 'Colômbia'),
-('Thibaut', 'Pinot', 'França'),
-('Romain', 'Bardet', 'França');
-
-
--- Associar Ciclistas à Volta a França 2024 (id_jogo_individual = 36)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(31, 36), -- Tadej Pogačar
-(32, 36), -- Jonas Vingegaard
-(33, 36), -- Primož Roglič
-(34, 36), -- Egan Bernal
-(35, 36), -- Geraint Thomas
-(36, 36), -- David Gaudu
-(37, 36), -- Simon Yates
-(38, 36), -- Adam Yates
-(39, 36), -- Richard Carapaz
-(40, 36); -- Enric Mas;
-
--- Associar Ciclistas à Volta a Portugal 2024
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(31, 37), -- Tadej Pogačar
-(32, 37), -- Jonas Vingegaard
-(33, 37), -- Primož Roglič
-(34, 37), -- Egan Bernal
-(41, 37), -- Wout Van Aert
-(42, 37), -- Tom Pidcock
-(43, 37), -- Jai Hindley
-(44, 37), -- Mikel Landa
-(45, 37); -- Ben O'Connor;
-
--- Associar Ciclistas ao Giro d'Italia 2024
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(31, 38), -- Tadej Pogačar
-(33, 38), -- Primož Roglič
-(34, 38), -- Egan Bernal
-(36, 38), -- David Gaudu
-(43, 38), -- Jai Hindley
-(44, 38), -- Mikel Landa
-(46, 38), -- Julian Alaphilippe
-(47, 38); -- Matej Mohorič;
-
--- Associar Ciclistas à Vuelta a España 2024
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(32, 39), -- Jonas Vingegaard
-(33, 39), -- Primož Roglič
-(34, 39), -- Egan Bernal
-(36, 39), -- David Gaudu
-(40, 39), -- Enric Mas
-(41, 39), -- Wout Van Aert
-(42, 39), -- Tom Pidcock
-(43, 39); -- Jai Hindley;
-
--- Associar Ciclistas à Paris-Roubaix 2024
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(31, 40), -- Tadej Pogačar
-(32, 40), -- Jonas Vingegaard
-(41, 40), -- Wout Van Aert
-(45, 40), -- Ben O'Connor
-(46, 40), -- Julian Alaphilippe
-(47, 40), -- Matej Mohorič
-(48, 40), -- Nairo Quintana
-(49, 40), -- Thibaut Pinot
-(50, 40);-- Romain Bardet;
-
-
-##### Criar Corridas Ciclismo #####
-INSERT INTO Jogo_Individual (id_modalidade_individual, nome_competicao, data)
-VALUES 
-(5, 'Volta a França 2024', '2024-07-06 10:00:00'),
-(5, 'Volta a Portugal 2024', '2024-08-01 09:00:00'),
-(5, 'Giro d\'Italia 2024', '2024-05-11 10:00:00'),
-(5, 'Vuelta a España 2024', '2024-08-24 10:00:00'),
-(5, 'Paris-Roubaix 2024', '2024-04-14 11:00:00');
+(9, 10),  -- Kyren Wilson
+(10, 10);  -- Barry Hawkins
 
 
 #### Modaalidade Fórmula1 ####
@@ -447,7 +153,7 @@ VALUES
 
 
 ##### Criar Circuitos Formula 1 #####
-INSERT INTO Jogo_Individual (id_modalidade_individual, nome_competicao, data)
+INSERT INTO Jogo_Individual (id_modalidade_individual, nome_jogo, data)
 VALUES 
 (2, 'Grande Prémio do Bahrein', '2024-03-03 15:00:00'),
 (2, 'Grande Prémio de Mónaco', '2024-05-26 14:00:00'),
@@ -455,125 +161,374 @@ VALUES
 (2, 'Grande Prémio da Bélgica', '2024-08-04 14:00:00'),
 (2, 'Grande Prémio de Abu Dhabi', '2024-12-01 14:00:00');
 
--- Grande Prémio do Bahrein (id_jogo_individual = 31)
+-- Grande Prémio do Bahrein (id_jogo_individual = 11)
 INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
 VALUES
-(36, 31), -- Max Verstappen
-(37, 31), -- Sergio Pérez
-(38, 31), -- Charles Leclerc
-(39, 31), -- Carlos Sainz
-(40, 31), -- Lewis Hamilton
-(41, 31), -- George Russell
-(42, 31), -- Fernando Alonso
-(43, 31), -- Lance Stroll
-(44, 31), -- Lando Norris
-(45, 31), -- Oscar Piastri
-(46, 31), -- Pierre Gasly
-(47, 31), -- Esteban Ocon
-(48, 31), -- Valtteri Bottas
-(49, 31), -- Guanyu Zhou
-(50, 31), -- Kevin Magnussen
-(51, 31), -- Nico Hülkenberg
-(52, 31), -- Yuki Tsunoda
-(53, 31), -- Daniel Ricciardo
-(54, 31), -- Alexander Albon
-(55, 31); -- Logan Sargeant
+(11, 11),  -- Max Verstappen
+(12, 11),  -- Sergio Pérez
+(13, 11),  -- Charles Leclerc
+(14, 11),  -- Carlos Sainz
+(15, 11),  -- Lewis Hamilton
+(16, 11),  -- George Russell
+(17, 11),  -- Fernando Alonso
+(18, 11),  -- Lance Stroll
+(19, 11),  -- Lando Norris
+(20, 11),  -- Oscar Piastri
+(21, 11),  -- Pierre Gasly
+(22, 11),  -- Esteban Ocon
+(23, 11),  -- Valtteri Bottas
+(24, 11),  -- Guanyu Zhou
+(25, 11),  -- Kevin Magnussen
+(26, 11),  -- Nico Hülkenberg
+(27, 11),  -- Yuki Tsunoda
+(28, 11),  -- Daniel Ricciardo
+(29, 11),  -- Alexander Albon
+(30, 11),  -- Logan Sargeant
 
--- Grande Prémio de Mónaco (id_jogo_individual = 32)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(36, 32),
-(37, 32),
-(38, 32),
-(39, 32),
-(40, 32),
-(41, 32),
-(42, 32),
-(43, 32),
-(44, 32),
-(45, 32),
-(46, 32),
-(47, 32),
-(48, 32),
-(49, 32),
-(50, 32),
-(51, 32),
-(52, 32),
-(53, 32),
-(54, 32),
-(55, 32);
+-- Grande Prémio de Mónaco (id_jogo_individual = 12)
+(11, 12),
+(12, 12),
+(13, 12),
+(14, 12),
+(15, 12),
+(16, 12),
+(17, 12),
+(18, 12),
+(19, 12),
+(20, 12),
+(21, 12),
+(22, 12),
+(23, 12),
+(24, 12),
+(25, 12),
+(26, 12),
+(27, 12),
+(28, 12),
+(29, 12),
+(30, 12),
 
--- Grande Prémio da Grã-Bretanha (id_jogo_individual = 33)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(36, 33),
-(37, 33),
-(38, 33),
-(39, 33),
-(40, 33),
-(41, 33),
-(42, 33),
-(43, 33),
-(44, 33),
-(45, 33),
-(46, 33),
-(47, 33),
-(48, 33),
-(49, 33),
-(50, 33),
-(51, 33),
-(52, 33),
-(53, 33),
-(54, 33),
-(55, 33);
+-- Grande Prémio da Grã-Bretanha (id_jogo_individual = 13)
+(11, 13),
+(12, 13),
+(13, 13),
+(14, 13),
+(15, 13),
+(16, 13),
+(17, 13),
+(18, 13),
+(19, 13),
+(20, 13),
+(21, 13),
+(22, 13),
+(23, 13),
+(24, 13),
+(25, 13),
+(26, 13),
+(27, 13),
+(28, 13),
+(29, 13),
+(30, 13),
 
--- Grande Prémio da Bélgica (id_jogo_individual = 34)
-INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
-VALUES
-(36, 34),
-(37, 34),
-(38, 34),
-(39, 34),
-(40, 34),
-(41, 34),
-(42, 34),
-(43, 34),
-(44, 34),
-(45, 34),
-(46, 34),
-(47, 34),
-(48, 34),
-(49, 34),
-(50, 34),
-(51, 34),
-(52, 34),
-(53, 34),
-(54, 34),
-(55, 34);
+-- Grande Prémio da Bélgica (id_jogo_individual = 14)
+(11, 14),
+(12, 14),
+(13, 14),
+(14, 14),
+(15, 14),
+(16, 14),
+(17, 14),
+(18, 14),
+(19, 14),
+(20, 14),
+(21, 14),
+(22, 14),
+(23, 14),
+(24, 14),
+(25, 14),
+(26, 14),
+(27, 14),
+(28, 14),
+(29, 14),
+(30, 14),
 
--- Grande Prémio de Abu Dhabi (id_jogo_individual = 35)
+-- Grande Prémio de Abu Dhabi (id_jogo_individual = 15)
+(11, 15),
+(12, 15),
+(13, 15),
+(14, 15),
+(15, 15),
+(16, 15),
+(17, 15),
+(18, 15),
+(19, 15),
+(20, 15),
+(21, 15),
+(22, 15),
+(23, 15),
+(24, 15),
+(25, 15),
+(26, 15),
+(27, 15),
+(28, 15),
+(29, 15),
+(30, 15);
+
+#### Modaalidade Ténis ####
+INSERT INTO Jogador (nome, apelido, nacionalidade)
+VALUES 
+('Novak', 'Djokovic', 'Sérvia'),
+('Carlos', 'Alcaraz', 'Espanha'),
+('Daniil', 'Medvedev', 'Rússia'),
+('Stefanos', 'Tsitsipas', 'Grécia'),
+('Casper', 'Ruud', 'Noruega'),
+('Jannik', 'Sinner', 'Itália'),
+('Andrey', 'Rublev', 'Rússia'),
+('Alexander', 'Zverev', 'Alemanha'),
+('Holger', 'Rune', 'Dinamarca'),
+('Matteo', 'Berrettini', 'Itália');
+
+
+##### Criar jogos Ténis #####
+INSERT INTO Jogo_Individual (id_modalidade_individual, nome_jogo, data)
+VALUES 
+(3, 'Australian Open - Final', '2024-01-28 15:00:00'),
+(3, 'Roland Garros - Semi-Final', '2024-06-07 12:00:00'),
+(3, 'Wimbledon - Final', '2024-07-14 14:00:00'),
+(3, 'US Open - Quarter-Final', '2024-09-02 18:00:00'),
+(3, 'ATP Finals - Round Robin', '2024-11-10 20:00:00'),
+(3, 'Monte Carlo Masters - Final', '2024-04-14 16:00:00'),
+(3, 'Madrid Open - Final', '2024-05-12 17:00:00'),
+(3, 'Italian Open - Quarter-Final', '2024-05-17 13:00:00'),
+(3, 'Paris Masters - Semi-Final', '2024-11-02 15:00:00'),
+(3, 'Cincinnati Masters - Final', '2024-08-18 16:00:00');
+
+
+-- Australian Open - Final (ID Jogo: 16)
 INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
 VALUES
-(36, 35),
-(37, 35),
-(38, 35),
-(39, 35),
-(40, 35),
-(41, 35),
-(42, 35),
-(43, 35),
-(44, 35),
-(45, 35),
-(46, 35),
-(47, 35),
-(48, 35),
-(49, 35),
-(50, 35),
-(51, 35),
-(52, 35),
-(53, 35),
-(54, 35),
-(55, 35);
+(31, 16),  -- Novak Djokovic
+(32, 16),  -- Carlos Alcaraz
+
+-- Roland Garros - Semi-Final (ID Jogo: 17)
+(33, 17),  -- Daniil Medvedev
+(34, 17),  -- Stefanos Tsitsipas
+
+-- Wimbledon - Final (ID Jogo: 18)
+(35, 18),  -- Casper Ruud
+(36, 18),  -- Jannik Sinner
+
+-- US Open - Quarter-Final (ID Jogo: 19)
+(37, 19),  -- Andrey Rublev
+(38, 19),  -- Alexander Zverev
+
+-- ATP Finals - Round Robin (ID Jogo: 20)
+(39, 20),  -- Holger Rune
+(40, 20),  -- Matteo Berrettini
+
+-- Monte Carlo Masters - Final (ID Jogo: 21)
+(31, 21),  -- Novak Djokovic
+(33, 21),  -- Daniil Medvedev
+
+-- Madrid Open - Final (ID Jogo: 22)
+(32, 22),  -- Carlos Alcaraz
+(34, 22),  -- Stefanos Tsitsipas
+
+-- Italian Open - Quarter-Final (ID Jogo: 23)
+(35, 23),  -- Casper Ruud
+(36, 23),  -- Jannik Sinner
+
+-- Paris Masters - Semi-Final (ID Jogo: 24)
+(37, 24),  -- Andrey Rublev
+(38, 24),  -- Alexander Zverev
+
+-- Cincinnati Masters - Final (ID Jogo: 25)
+(39, 25),  -- Holger Rune
+(40, 25);  -- Matteo Berrettini
+
+
+#### Modaalidade Padel ####
+INSERT INTO Jogador (nome, apelido, nacionalidade)
+VALUES 
+('Alejandro', 'Galán', 'Espanha'),
+('Juan', 'Lebrón', 'Espanha'),
+('Paquito', 'Navarro', 'Espanha'),
+('Fernando', 'Belasteguín', 'Argentina'),
+('Agustín', 'Tapia', 'Argentina'),
+('Maxi', 'Sánchez', 'Argentina'),
+('Sanyo', 'Gutiérrez', 'Argentina'),
+('Javi', 'Rico', 'Espanha'),
+('Franco', 'Stupaczuk', 'Argentina'),
+('Martin', 'Di Nenno', 'Argentina');
+
+
+##### Criar jogos Padel #####
+INSERT INTO Jogo_Individual (id_modalidade_individual, nome_jogo, data)
+VALUES 
+(4, 'World Padel Tour - Madrid Open', '2024-03-15 10:00:00'),
+(4, 'World Padel Tour - Barcelona Master', '2024-04-12 14:00:00'),
+(4, 'World Padel Tour - Marbella Challenger', '2024-05-07 09:00:00'),
+(4, 'World Padel Tour - Valencia Open', '2024-06-10 13:00:00'),
+(4, 'World Padel Tour - Malaga Open', '2024-07-05 11:00:00'),
+(4, 'World Padel Tour - Las Rozas Master', '2024-08-03 16:00:00'),
+(4, 'World Padel Tour - Alicante Open', '2024-09-14 17:00:00'),
+(4, 'World Padel Tour - Bilbao Open', '2024-10-20 18:00:00'),
+(4, 'World Padel Tour - Menorca Master', '2024-11-02 12:00:00'),
+(4, 'World Padel Tour - Madrid Finals', '2024-12-09 19:00:00');
+
+
+-- Associação de Jogadores aos Jogos de Padel
+
+-- World Padel Tour - Madrid Open (ID Jogo: 26)
+INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
+VALUES
+(41, 26),  -- Alejandro Galán
+(42, 26),  -- Juan Lebrón
+(43, 26),  -- Paquito Navarro
+(44, 26),  -- Fernando Belasteguín
+
+-- World Padel Tour - Barcelona Master (ID Jogo: 27)
+(45, 27),  -- Agustín Tapia
+(46, 27),  -- Maxi Sánchez
+(47, 27),  -- Sanyo Gutiérrez
+(48, 27),  -- Javi Rico
+
+-- World Padel Tour - Marbella Challenger (ID Jogo: 28)
+(49, 28),  -- Franco Stupaczuk
+(50, 28),  -- Martin Di Nenno
+(41, 28),  -- Alejandro Galán
+(42, 28),  -- Juan Lebrón
+
+-- World Padel Tour - Valencia Open (ID Jogo: 29)
+(43, 29),  -- Paquito Navarro
+(44, 29),  -- Fernando Belasteguín
+(45, 29),  -- Agustín Tapia
+(46, 29),  -- Maxi Sánchez
+
+-- World Padel Tour - Malaga Open (ID Jogo: 30)
+(47, 30),  -- Sanyo Gutiérrez
+(48, 30),  -- Javi Rico
+(49, 30),  -- Franco Stupaczuk
+(50, 30),  -- Martin Di Nenno
+
+-- World Padel Tour - Las Rozas Master (ID Jogo: 31)
+(41, 31),  -- Alejandro Galán
+(42, 31),  -- Juan Lebrón
+(43, 31),  -- Paquito Navarro
+(44, 31),  -- Fernando Belasteguín
+
+-- World Padel Tour - Alicante Open (ID Jogo: 32)
+(45, 32),  -- Agustín Tapia
+(46, 32),  -- Maxi Sánchez
+(47, 32),  -- Sanyo Gutiérrez
+(48, 32),  -- Javi Rico
+
+-- World Padel Tour - Bilbao Open (ID Jogo: 33)
+(49, 33),  -- Franco Stupaczuk
+(50, 33),  -- Martin Di Nenno
+(41, 33),  -- Alejandro Galán
+(42, 33),  -- Juan Lebrón
+
+-- World Padel Tour - Menorca Master (ID Jogo: 34)
+(43, 34),  -- Paquito Navarro
+(44, 34),  -- Fernando Belasteguín
+(45, 34),  -- Agustín Tapia
+(46, 34),  -- Maxi Sánchez
+
+-- World Padel Tour - Madrid Finals (ID Jogo: 35)
+(47, 35),  -- Sanyo Gutiérrez
+(48, 35),  -- Javi Rico
+(49, 35),  -- Franco Stupaczuk
+(50, 35);  -- Martin Di Nenno
+
+
+#### Modaalidade Ciclismo ####
+INSERT INTO Jogador (nome, apelido, nacionalidade)
+VALUES 
+('Tadej', 'Pogačar', 'Eslovénia'),
+('Jonas', 'Vingegaard', 'Dinamarca'),
+('Primož', 'Roglič', 'Eslovénia'),
+('Egan', 'Bernal', 'Colômbia'),
+('Geraint', 'Thomas', 'Reino Unido'),
+('David', 'Gaudu', 'França'),
+('Simon', 'Yates', 'Reino Unido'),
+('Adam', 'Yates', 'Reino Unido'),
+('Richard', 'Carapaz', 'Equador'),
+('Enric', 'Mas', 'Espanha'),
+('Wout', 'Van Aert', 'Bélgica'),
+('Tom', 'Pidcock', 'Reino Unido'),
+('Jai', 'Hindley', 'Austrália'),
+('Mikel', 'Landa', 'Espanha'),
+('Ben', 'O\'Connor', 'Austrália'),
+('Julian', 'Alaphilippe', 'França'),
+('Matej', 'Mohorič', 'Eslovénia'),
+('Nairo', 'Quintana', 'Colômbia'),
+('Thibaut', 'Pinot', 'França'),
+('Romain', 'Bardet', 'França');
+
+##### Criar Corridas Ciclismo #####
+INSERT INTO Jogo_Individual (id_modalidade_individual, nome_jogo, data)
+VALUES 
+(5, 'Volta a França 2024', '2024-07-06 10:00:00'),
+(5, 'Volta a Portugal 2024', '2024-08-01 09:00:00'),
+(5, 'Giro d\'Italia 2024', '2024-05-11 10:00:00'),
+(5, 'Vuelta a España 2024', '2024-08-24 10:00:00'),
+(5, 'Paris-Roubaix 2024', '2024-04-14 11:00:00');
+
+-- Associar Ciclistas à Volta a França 2024 (id_jogo_individual = 36)
+INSERT INTO Jogador_JogoIndividual (id_jogador, id_jogo_individual)
+VALUES
+(51, 36),  -- Tadej Pogačar
+(52, 36),  -- Jonas Vingegaard
+(53, 36),  -- Primož Roglič
+(54, 36),  -- Egan Bernal
+(55, 36),  -- Geraint Thomas
+(56, 36),  -- David Gaudu
+(57, 36),  -- Simon Yates
+(58, 36),  -- Adam Yates
+(59, 36),  -- Richard Carapaz
+(60, 36),  -- Enric Mas
+
+-- Associar Ciclistas à Volta a Portugal 2024 (id_jogo_individual = 37)
+(51, 37),  -- Tadej Pogačar
+(52, 37),  -- Jonas Vingegaard
+(53, 37),  -- Primož Roglič
+(54, 37),  -- Egan Bernal
+(61, 37),  -- Wout Van Aert
+(62, 37),  -- Tom Pidcock
+(63, 37),  -- Jai Hindley
+(64, 37),  -- Mikel Landa
+(65, 37),  -- Ben O'Connor
+
+-- Associar Ciclistas ao Giro d'Italia 2024 (id_jogo_individual = 38)
+(51, 38),  -- Tadej Pogačar
+(53, 38),  -- Primož Roglič
+(54, 38),  -- Egan Bernal
+(56, 38),  -- David Gaudu
+(63, 38),  -- Jai Hindley
+(64, 38),  -- Mikel Landa
+(66, 38),  -- Julian Alaphilippe
+(67, 38),  -- Matej Mohorič
+
+-- Associar Ciclistas à Vuelta a España 2024 (id_jogo_individual = 39)
+(52, 39),  -- Jonas Vingegaard
+(53, 39),  -- Primož Roglič
+(54, 39),  -- Egan Bernal
+(56, 39),  -- David Gaudu
+(60, 39),  -- Enric Mas
+(61, 39),  -- Wout Van Aert
+(62, 39),  -- Tom Pidcock
+(63, 39),  -- Jai Hindley
+
+-- Associar Ciclistas à Paris-Roubaix 2024 (id_jogo_individual = 40)
+(51, 40),  -- Tadej Pogačar
+(52, 40),  -- Jonas Vingegaard
+(61, 40),  -- Wout Van Aert
+(65, 40),  -- Ben O'Connor
+(66, 40),  -- Julian Alaphilippe
+(67, 40),  -- Matej Mohorič
+(68, 40),  -- Nairo Quintana
+(69, 40),  -- Thibaut Pinot
+(70, 40);  -- Romain Bardet
 
 
 -- ##### CRIAR JOGADORES DESPORTOS COLETIVOS ######
@@ -681,7 +636,6 @@ VALUES
 ('Sevilla FC'),
 ('Real Betis'),
 ('Villarreal CF');
-
 
 -- Associações para as equipas do Campeonato Português
 -- Jogadores do FC Porto (IDs de 71 a 75)
@@ -879,10 +833,7 @@ VALUES
 ('Gonçalo', 'Sousa', 'Portugal'),
 ('Ricardo', 'Ferreira', 'Portugal'),
 ('João', 'Matos', 'Portugal'),
-('Tiago', 'Silva', 'Portugal');
-
-INSERT INTO Jogador (nome, apelido, nacionalidade)
-VALUES
+('Tiago', 'Silva', 'Portugal'),
 ('André', 'Sousa', 'Portugal'),
 ('Pany', 'Varela', 'Cabo Verde'),
 ('Zicky', 'Té', 'Portugal'),
@@ -923,47 +874,37 @@ VALUES
 (162, 19), 
 (163, 19), 
 (164, 19), 
-(165, 19);
+(165, 19),
 
 -- SL Benfica Futsal (IDs 166 a 170)
-INSERT INTO Jogador_Equipa (id_jogador, id_equipa)
-VALUES
 (166, 20), 
 (167, 20), 
 (168, 20), 
 (169, 20), 
-(170, 20);
+(170, 20),
 
 -- Modicus Sandim (IDs 171 a 175)
-INSERT INTO Jogador_Equipa (id_jogador, id_equipa)
-VALUES
 (171, 21), 
 (172, 21), 
 (173, 21), 
 (174, 21), 
-(175, 21);
+(175, 21),
 
 -- Leões de Porto Salvo (IDs 176 a 180)
-INSERT INTO Jogador_Equipa (id_jogador, id_equipa)
-VALUES
 (176, 22), 
 (177, 22), 
 (178, 22), 
 (179, 22), 
-(180, 22);
+(180, 22),
 
 -- AD Fundão (IDs 181 a 185)
-INSERT INTO Jogador_Equipa (id_jogador, id_equipa)
-VALUES
 (181, 23), 
 (182, 23), 
 (183, 23), 
 (184, 23), 
-(185, 23);
+(185, 23),
 
 -- SC Braga Futsal (IDs 186 a 190)
-INSERT INTO Jogador_Equipa (id_jogador, id_equipa)
-VALUES
 (186, 24), 
 (187, 24), 
 (188, 24), 
@@ -1005,107 +946,333 @@ VALUES
 -- Sporting CP Voleibol (IDs 191 a 193)
 INSERT INTO Jogador_Equipa (id_jogador, id_equipa)
 VALUES
-(191, 25), 
-(192, 25), 
-(193, 25);
+(191, 25), (192, 25), (193, 25),
 
 -- SL Benfica Voleibol (IDs 194 a 196)
-INSERT INTO Jogador_Equipa (id_jogador, id_equipa)
-VALUES
-(194, 26), 
-(195, 26), 
-(196, 26);
+(194, 26), (195, 26), (196, 26),
 
 -- AJF Bastardo (IDs 197 a 199)
-INSERT INTO Jogador_Equipa (id_jogador, id_equipa)
-VALUES
-(197, 27), 
-(198, 27), 
-(199, 27);
+
+(197, 27), (198, 27), (199, 27),
 
 -- SC Espinho (IDs 200 a 202)
-INSERT INTO Jogador_Equipa (id_jogador, id_equipa)
-VALUES
-(200, 28), 
-(201, 28), 
-(202, 28);
+(200, 28), (201, 28), (202, 28),
 
 -- VC Viana (IDs 203 a 205)
-INSERT INTO Jogador_Equipa (id_jogador, id_equipa)
-VALUES
-(203, 29), 
-(204, 29), 
-(205, 29);
+(203, 29), (204, 29), (205, 29),
 
 -- Leixões SC Voleibol (IDs 206 a 208)
-INSERT INTO Jogador_Equipa (id_jogador, id_equipa)
-VALUES
-(206, 30), 
-(207, 30), 
-(208, 30);
+(206, 30), (207, 30), (208, 30);
 
 
 -- Inserir Modalidades Coletivas
 INSERT INTO Modalidade_Coletiva (nome_modalidade)
 VALUES
-('Futebol'),
-('Futsal'),
-('Voleibol');
+('Futebol'), ('Futsal'), ('Voleibol');
 
 
--- Jogos de Futebol
-INSERT INTO Jogo_Coletivo (id_equipa_visitante, id_equipa_visitada, id_modalidade_coletiva, resultado)
+-- Inserir Jogos de Futebol
+INSERT INTO Jogo_Coletivo (id_modalidade_coletiva, nome_jogo, resultado)
 VALUES
-(1, 2, 1, '2-1'),  -- FC Porto vs SL Benfica
-(3, 4, 1, '0-0'),  -- Sporting CP vs SC Braga
-(5, 6, 1, '1-1');  -- Vitória SC vs Rio Ave FC
+(1, 'FC Porto vs SL Benfica', '2-1'),  -- Futebol - FC Porto vs SL Benfica
+(1, 'Sporting CP vs SC Braga', '0-0'),  -- Futebol - Sporting CP vs SC Braga
+(1, 'Vitória SC vs Rio Ave FC', '1-1'),  -- Futebol - Vitória SC vs Rio Ave FC
 
--- Jogos de Futsal
-INSERT INTO Jogo_Coletivo (id_equipa_visitante, id_equipa_visitada, id_modalidade_coletiva, resultado)
+-- Inserir Jogos de Futsal
+(2, 'Sporting CP Futsal vs SL Benfica Futsal', '3-2'),  -- Futsal - Sporting CP Futsal vs SL Benfica Futsal
+(2, 'SC Braga Futsal vs Modicus Sandim', '1-1'),  -- Futsal - SC Braga Futsal vs Modicus Sandim
+(2, 'Leões de Porto Salvo vs AD Fundão', '4-3'),  -- Futsal - Leões de Porto Salvo vs AD Fundão
+
+-- Inserir Jogos de Voleibol
+(3, 'Sporting CP Voleibol vs SL Benfica Voleibol', '3-1'),  -- Voleibol - Sporting CP Voleibol vs SL Benfica Voleibol
+(3, 'AJF Bastardo vs SC Espinho', '2-3'),  -- Voleibol - AJF Bastardo vs SC Espinho
+(3, 'VC Viana vs Leixões SC Voleibol', '3-0');  -- Voleibol - VC Viana vs Leixões SC Voleibol
+
+
+
+INSERT INTO JogoColetivo_Equipa (id_equipa, id_jogo_coletivo)
 VALUES
-(19, 20, 2, '3-2'),  -- Sporting CP Futsal vs SL Benfica Futsal
-(21, 22, 2, '1-1'),  -- SC Braga Futsal vs Modicus Sandim
-(23, 24, 2, '4-3');  -- Leões de Porto Salvo vs AD Fundão
+-- FC Porto vs SL Benfica
+(1, 1),  -- FC Porto
+(2, 1),  -- SL Benfica
 
--- Jogos de Voleibol
-INSERT INTO Jogo_Coletivo (id_equipa_visitante, id_equipa_visitada, id_modalidade_coletiva, resultado)
-VALUES
-(25, 26, 3, '3-1'),  -- Sporting CP Voleibol vs SL Benfica Voleibol
-(27, 28, 3, '2-3'),  -- AJF Bastardo vs SC Espinho
-(29, 30, 3, '3-0');  -- VC Viana vs Leixões SC Voleibol
+-- Sporting CP vs SC Braga
+(3, 2),  -- Sporting CP
+(4, 2),  -- SC Braga
 
+-- Vitória SC vs Rio Ave FC
+(5, 3),  -- Vitória SC
+(6, 3),  -- Rio Ave FC
 
--- Apostas de Futebol
+-- Sporting CP Futsal vs SL Benfica Futsal
+(19, 4),  -- Sporting CP Futsal
+(20, 4),  -- SL Benfica Futsal
+
+-- SC Braga Futsal vs Modicus Sandim
+(21, 5),  -- SC Braga Futsal
+(22, 5),  -- Modicus Sandim
+
+-- Leões de Porto Salvo vs AD Fundão
+(23, 6),  -- Leões de Porto Salvo
+(24, 6),  -- AD Fundão
+
+-- Sporting CP Voleibol vs SL Benfica Voleibol
+(25, 7),  -- Sporting CP Voleibol
+(26, 7),  -- SL Benfica Voleibol
+
+-- AJF Bastardo vs SC Espinho
+(27, 8),  -- AJF Bastardo
+(28, 8),  -- SC Espinho
+
+-- VC Viana vs Leixões SC Voleibol
+(29, 9),  -- VC Viana
+(30, 9);  -- Leixões SC Voleibol
+
 INSERT INTO Tipo_Aposta (nome_tipo_aposta, disponivel)
 VALUES
-('Vencedor da Partida', TRUE),
-('Golo do Jogador X ', TRUE),
-('Resultado ao Intervalo', TRUE),
-('Ambas as Equipas Marcam', TRUE),
-('Total de Golos Acima/Abaixo', TRUE),
-('Resultado Exato - Futebol', TRUE),
-('Primeiro Jogador a Marcar', TRUE),
 
--- Apostas de Futsal
-('Vencedor da Partida', TRUE),
-('Total de Golos Acima/Abaixo', TRUE),
-('Golo do Jogador X', TRUE),
-('Resultado ao Intervalo', TRUE),
-('Resultado Exato', TRUE),
+-- Tipo Apostas Desportos INDIVIDUAIS
+('Vencedor da Partida', 1),  -- Aposta no vencedor da partida (geral)
+('Total de Sets Acima/Abaixo', 1),  -- Aposta no número total de sets (Ténis, Padel)
+('Vencedor do 1º Set/Frame', 1),  -- Aposta no vencedor do primeiro set ou frame (Ténis, Snooker)
+('Total de Aces', 1),  -- Aposta no número total de aces (Ténis)
+('Número de Frames Acima/Abaixo', 1),  -- Aposta no número de frames (Snooker)
+('Break Máximo', 1),  -- Aposta no jogador que terá o break mais alto (Snooker)
+('Vencedor da Etapa', 1),  -- Aposta no vencedor da etapa (Ciclismo)
+('Vencedor da Corrida', 1),  -- Aposta no vencedor de uma corrida (Fórmula 1)
+('Pole Position', 1),  -- Aposta em quem consegue a pole position (Fórmula 1)
+('Volta Mais Rápida', 1),  -- Aposta no piloto com a volta mais rápida (Fórmula 1)
+('Total de Games Acima/Abaixo', 1),  -- Aposta no número total de games (Ténis, Padel)
+('Vencedor do Campeonato', 1),  -- Aposta no vencedor do campeonato (geral)
+('Primeiro Jogador a Vencer um Set/Frame', 1),  -- Aposta em quem vencerá o primeiro set ou frame (Ténis, Snooker)
+('Total de Golos em Ciclismo', 1),  -- Aposta em total de vitórias por ciclista ou equipa (Ciclismo)
 
--- Apostas de Voleibol
-('Vencedor da Partida', TRUE),
-('Total de Sets', TRUE),
-('Resultado Exato de Sets', TRUE),
-('Primeira Equipa a Vencer um Set', TRUE),
-('Jogador X Vencerá o Set', TRUE);
+-- Tipo Apostas Desportos COLETIVOS
+('Vencedor do Jogo', 1),  -- Aposta no vencedor da partida
+('Ambas as Equipas Marcam', 1),  -- Aposta se ambas as equipas marcam
+('Resultado Exato', 1),  -- Aposta no resultado exato do jogo
+('Total de Golos Acima/Abaixo', 1),  -- Aposta no total de golos acima/abaixo de um valor (ex: 2.5)
+('Primeiro a Marcar', 1),  -- Aposta em qual equipa ou jogador marca primeiro
+('Intervalo/Final', 1),  -- Aposta no resultado ao intervalo e no final do jogo
+('Handicap Asiático', 1),  -- Aposta com handicap asiático
+('Número Total de Cantos', 1),  -- Aposta no número total de cantos no jogo
+('Número Total de Cartões', 1),  -- Aposta no número total de cartões no jogo
+('Primeiro Jogador a Marcar', 1),  -- Aposta em qual jogador marcará primeiro
+('Último Jogador a Marcar', 1),  -- Aposta em qual jogador marcará por último
+('Jogador X Marca Durante o Jogo', 1),  -- Aposta se o jogador específico marcará durante o jogo
+('Dupla Hipótese', 1);  -- Aposta em dois resultados possíveis (ex: vitória da equipa A ou empate)
 
 
+-- Aposta no vencedor da partida - Ronnie O'Sullivan
+INSERT INTO Aposta_JogoIndividual (id_jogador, id_tipo_aposta, id_jogo_individual, detalhe_aposta, valor_odd)
+VALUES (1, 1, 1, 'Ronnie O\'Sullivan vence a partida', 1.80),
+
+-- Aposta no vencedor da partida - Judd Trump
+(2, 1, 1, 'Judd Trump vence a partida', 2.00),
+
+-- Aposta no vencedor do 1º frame - Ronnie O'Sullivan
+(1, 3, 1, 'Ronnie O\'Sullivan vence o 1º frame', 1.90),
+
+-- Aposta no break máximo - Judd Trump
+(2, 6, 1, 'Judd Trump faz o break máximo', 3.50),
+
+-- Aposta no vencedor da partida - Novak Djokovic
+(31, 1, 16, 'Novak Djokovic vence a partida', 1.50),
+
+-- Aposta no vencedor da partida - Carlos Alcaraz
+(32, 1, 16, 'Carlos Alcaraz vence a partida', 2.50),
+
+-- Aposta no total de sets acima de 3.5
+-- Nota: Como o tipo de aposta requer um jogador, associamos ao jogador principal
+(31, 2, 16, 'Total de sets acima de 3.5', 1.80),
+
+-- Aposta no total de aces de Novak Djokovic acima de 10.5
+(31, 4, 16, 'Djokovic aces acima de 10.5', 1.95),
+
+-- Aposta no vencedor da corrida - Max Verstappen
+(11, 8, 11, 'Max Verstappen vence a corrida', 2.20),
+
+-- Aposta na pole position - Lewis Hamilton
+(15, 9, 11, 'Lewis Hamilton conquista a pole position', 3.00),
+
+-- Aposta na volta mais rápida - Max Verstappen
+(11, 10, 11, 'Max Verstappen faz a volta mais rápida', 2.50),
+
+-- Aposta na dupla vencedora - Galán/Lebrón
+(41, 1, 26, 'Galán/Lebrón vencem a partida', 1.60),
+
+-- Aposta no total de games acima de 18.5
+(41, 11, 26, 'Total de games acima de 18.5', 1.85),
+
+-- Aposta no vencedor do 1º set - Galán/Lebrón
+(41, 3, 26, 'Galán/Lebrón vencem o 1º set', 1.70),
+
+-- Aposta no vencedor da etapa - Tadej Pogačar
+(51, 7, 36, 'Tadej Pogačar vence a etapa', 2.10),
+
+-- Aposta no vencedor do campeonato - Primož Roglič
+(53, 12, 36, 'Primož Roglič vence a Volta a França', 3.50),
+
+-- Aposta no total de vitórias acima de 3.5 para Tadej Pogačar
+(51, 14, 36, 'Pogačar conquista mais de 3.5 vitórias', 1.75),
+
+-- Aposta no vencedor da partida - Jannik Sinner
+(36, 1, 18, 'Jannik Sinner vence a partida', 1.85),
+
+-- Aposta no total de aces acima de 15.5 no jogo
+(36, 4, 18, 'Total de aces acima de 15.5', 1.90),
+
+-- Aposta em Casper Ruud a vencer o primeiro set
+(35, 13, 18, 'Casper Ruud vence o primeiro set', 2.00);
 
 
+###### APOSTAS NOS JOGADORES #######
+INSERT INTO Aposta_Jogador (id_tipo_aposta, id_jogador, id_equipa, detalhe_aposta, valor_odd)
+VALUES
+-- Aposta: Primeiro Jogador a Marcar (id_tipo_aposta = 24)
+(24, 73, 1, 'Mehdi Taremi marca o primeiro golo contra o SL Benfica', 2.50),  -- FC Porto
+(24, 78, 2, 'João Mário marca o primeiro golo contra o FC Porto', 3.00),       -- SL Benfica
+(24, 83, 3, 'Pedro Gonçalves marca o primeiro golo contra o SC Braga', 2.80),  -- Sporting CP
+(24, 87, 4, 'Ricardo Horta marca o primeiro golo contra o Sporting CP', 3.20), -- SC Braga
+
+-- Aposta: Jogador X Marca Durante o Jogo (id_tipo_aposta = 26)
+(26, 79, 2, 'Ángel Di María marca a qualquer momento contra o FC Porto', 1.90), -- SL Benfica
+(26, 74, 1, 'Otávio marca a qualquer momento contra o SL Benfica', 2.10),       -- FC Porto
+(26, 85, 3, 'Paulinho marca a qualquer momento contra o SC Braga', 2.00),       -- Sporting CP
+(26, 90, 4, 'Vítor Oliveira marca a qualquer momento contra o Sporting CP', 2.20), -- SC Braga
+
+-- Aposta: Último Jogador a Marcar (id_tipo_aposta = 25)
+(25, 73, 1, 'Mehdi Taremi marca o último golo contra o SL Benfica', 2.70),     -- FC Porto
+(25, 80, 2, 'Rafa Silva marca o último golo contra o FC Porto', 3.10),         -- SL Benfica
+(25, 84, 3, 'Marcus Edwards marca o último golo contra o SC Braga', 3.00),     -- Sporting CP
+(25, 88, 4, 'Al Musrati marca o último golo contra o Sporting CP', 3.50);      -- SC Braga
+
+INSERT INTO Aposta_JogoColetivo (id_jogo_coletivo, id_equipa, id_tipo_aposta, detalhe_aposta, valor_odd)
+VALUES
+-- **Vencedor do Jogo**
+(1, 1, 15, 'FC Porto vence o jogo contra SL Benfica', 2.50),
+(1, NULL, 15, 'Empate entre FC Porto e SL Benfica', 3.00),
+(1, 2, 15, 'SL Benfica vence o jogo contra FC Porto', 2.80),
+
+-- **Total de Golos Acima/Abaixo**
+(1, NULL, 18, 'Total de golos acima de 2.5', 1.80),
+(1, NULL, 18, 'Total de golos abaixo de 2.5', 2.00),
+
+-- **Resultado Exato**
+(1, NULL, 17, 'Resultado exato 1-0 a favor do FC Porto', 7.50),
+(1, NULL, 17, 'Resultado exato 1-1', 6.00),
+(1, NULL, 17, 'Resultado exato 0-1 a favor do SL Benfica', 7.00),
+
+-- **Ambas as Equipas Marcam**
+(1, NULL, 16, 'Ambas as equipas marcam - Sim', 1.70),
+(1, NULL, 16, 'Ambas as equipas marcam - Não', 2.10),
+
+-- **Handicap Asiático**
+(1, 1, 21, 'FC Porto -1.0', 3.50),
+(1, 2, 21, 'SL Benfica -1.0', 3.80),
+
+-- **Primeiro a Marcar**
+(1, 1, 19, 'FC Porto marca o primeiro golo', 1.90),
+(1, 2, 19, 'SL Benfica marca o primeiro golo', 2.00),
+(1, NULL, 19, 'Sem golos marcados', 8.00);
 
 
+INSERT INTO Aposta_JogoColetivo (id_jogo_coletivo, id_equipa, id_tipo_aposta, detalhe_aposta, valor_odd)
+VALUES
+-- **Vencedor do Jogo**
+(2, 3, 15, 'Sporting CP vence o jogo contra SC Braga', 2.20),
+(2, NULL, 15, 'Empate entre Sporting CP e SC Braga', 3.10),
+(2, 4, 15, 'SC Braga vence o jogo contra Sporting CP', 3.00),
 
+-- **Total de Golos Acima/Abaixo**
+(2, NULL, 18, 'Total de golos acima de 2.5', 1.95),
+(2, NULL, 18, 'Total de golos abaixo de 2.5', 1.85),
 
+-- **Resultado Exato**
+(2, NULL, 17, 'Resultado exato 2-1 a favor do Sporting CP', 8.00),
+(2, NULL, 17, 'Resultado exato 1-1', 6.50),
+(2, NULL, 17, 'Resultado exato 1-2 a favor do SC Braga', 9.00),
 
+-- **Ambas as Equipas Marcam**
+(2, NULL, 16, 'Ambas as equipas marcam - Sim', 1.80),
+(2, NULL, 16, 'Ambas as equipas marcam - Não', 2.00),
 
+-- **Handicap Asiático**
+(2, 3, 21, 'Sporting CP -0.5', 2.10),
+(2, 4, 21, 'SC Braga +0.5', 1.70),
+
+-- **Primeiro a Marcar**
+(2, 3, 19, 'Sporting CP marca o primeiro golo', 1.85),
+(2, 4, 19, 'SC Braga marca o primeiro golo', 2.05),
+(2, NULL, 19, 'Sem golos marcados', 7.50);
+
+INSERT INTO Aposta_JogoColetivo (id_jogo_coletivo, id_equipa, id_tipo_aposta, detalhe_aposta, valor_odd)
+VALUES
+-- **Vencedor do Jogo**
+(3, 5, 15, 'Vitória SC vence o jogo contra Rio Ave FC', 2.40),
+(3, NULL, 15, 'Empate entre Vitória SC e Rio Ave FC', 3.20),
+(3, 6, 15, 'Rio Ave FC vence o jogo contra Vitória SC', 2.90),
+
+-- **Total de Golos Acima/Abaixo**
+(3, NULL, 18, 'Total de golos acima de 2.5', 2.00),
+(3, NULL, 18, 'Total de golos abaixo de 2.5', 1.80),
+
+-- **Resultado Exato**
+(3, NULL, 17, 'Resultado exato 1-0 a favor do Vitória SC', 7.00),
+(3, NULL, 17, 'Resultado exato 0-0', 6.50),
+(3, NULL, 17, 'Resultado exato 0-1 a favor do Rio Ave FC', 7.50),
+
+-- **Ambas as Equipas Marcam**
+(3, NULL, 16, 'Ambas as equipas marcam - Sim', 1.85),
+(3, NULL, 16, 'Ambas as equipas marcam - Não', 1.95),
+
+-- **Handicap Asiático**
+(3, 5, 21, 'Vitória SC -0.5', 2.20),
+(3, 6, 21, 'Rio Ave FC +0.5', 1.65),
+
+-- **Primeiro a Marcar**
+(3, 5, 19, 'Vitória SC marca o primeiro golo', 1.90),
+(3, 6, 19, 'Rio Ave FC marca o primeiro golo', 2.00),
+(3, NULL, 19, 'Sem golos marcados', 8.50);
+
+-- Boletins para o Utilizador 2 (Ana Pereira)
+INSERT INTO Boletim (id_tipo_aposta_boletim, id_utilizador, valor_apostado, data_bilhete, resultado_boletim)
+VALUES
+(1, 2, 25.00, '2024-09-16', FALSE),  -- Boletim Simples
+(2, 2, 40.00, '2024-09-17', FALSE),  -- Boletim Múltipla
+(3, 2, 35.00, '2024-09-18', FALSE),  -- Boletim Combinada
+
+-- Boletins para o Utilizador 5 (Pedro Martins)
+(1, 5, 30.00, '2024-09-19', FALSE),  -- Boletim Simples
+(2, 5, 45.00, '2024-09-20', FALSE),  -- Boletim Múltipla
+(3, 5, 50.00, '2024-09-21', FALSE),  -- Boletim Combinada
+
+-- Boletins para o Utilizador 8 (Helena Fernandes)
+(1, 8, 35.00, '2024-09-22', FALSE),  -- Boletim Simples
+(2, 8, 50.00, '2024-09-23', FALSE),  -- Boletim Múltipla
+(3, 8, 55.00, '2024-09-24', FALSE);  -- Boletim Combinada
+
+INSERT INTO ApostaJogoIndividual_Boletim (id_boletim, id_aposta_individual)
+VALUES
+(1, 1),
+(2, 5),
+(2, 9),
+(2, 15),
+(3, 18),
+(6, 11),
+(5, 6),
+(9, 16);
+
+-- Inserção na tabela ApostaJogador_Boletim
+INSERT INTO ApostaJogador_Boletim (id_boletim, id_equipa, id_jogador)
+VALUES
+(6, 2, 78), 
+(7, 3, 83),
+(9, 4, 87);
+
+INSERT INTO ApostaJogoColetivo_Boletim (id_boletim, id_aposta_jogo_coletivo)
+VALUES
+(8, 7),
+(6, 4),
+(5, 3),
+(8, 10);
