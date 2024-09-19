@@ -32,7 +32,7 @@ WHERE id_verificacao_indentidade = 4;
 
 -- a) Atualizar o nome de uma modalidade
 UPDATE Modalidade_Individual
-SET nome_modalidade_individual = 'Ténis de Mesa'
+SET nome_modalidade_individual = 'Ténis'
 WHERE id_modalidade_individual = 3;
 
 -- ---------- Tabela Jogo_Individual ----------
@@ -65,7 +65,7 @@ VALUES (3, 1);
 
 -- a) Atualizar o nome da equipa
 UPDATE Equipa
-SET nome_equipa = 'FC Porto B'
+SET nome_equipa = 'FC Porto'
 WHERE id_equipa = 1;
 
 -- ---------- Tabela Jogador_Equipa ----------
